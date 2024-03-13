@@ -70,6 +70,9 @@ pub enum Language {
     #[cfg(feature = "bokmal")]
     Bokmal,
 
+    #[cfg(feature = "norwegian")]
+    Norwegian,
+
     #[cfg(feature = "bosnian")]
     Bosnian,
 
@@ -406,6 +409,10 @@ impl Language {
             #[cfg(feature = "bokmal")]
             Language::Bokmal => IsoCode639_1::NB,
 
+            #[cfg(feature = "norwegian")]
+            Language::Norwegian => IsoCode639_1::NO,
+
+
             #[cfg(feature = "bosnian")]
             Language::Bosnian => IsoCode639_1::BS,
 
@@ -683,6 +690,9 @@ impl Language {
             #[cfg(feature = "bokmal")]
             Language::Bokmal => IsoCode639_3::NOB,
 
+            #[cfg(feature = "norwegian")]
+            Language::Norwegian => IsoCode639_3::NOR,
+
             #[cfg(feature = "bosnian")]
             Language::Bosnian => IsoCode639_3::BOS,
 
@@ -947,6 +957,9 @@ impl Language {
 
             #[cfg(feature = "bokmal")]
             Language::Bokmal => hashset!(Alphabet::Latin),
+
+            #[cfg(feature = "norwegian")]
+            Language::Norwegian => hashset!(Alphabet::Latin),
 
             #[cfg(feature = "bosnian")]
             Language::Bosnian => hashset!(Alphabet::Latin),
@@ -1362,6 +1375,7 @@ mod tests {
                 Maori,
                 Marathi,
                 Mongolian,
+                Norwegian,
                 Nynorsk,
                 Persian,
                 Polish,
@@ -1445,6 +1459,7 @@ mod tests {
                 Maori,
                 Marathi,
                 Mongolian,
+                Norwegian,
                 Nynorsk,
                 Persian,
                 Polish,
@@ -1538,6 +1553,7 @@ mod tests {
                 Lithuanian,
                 Malay,
                 Maori,
+                Norwegian,
                 Nynorsk,
                 Polish,
                 Portuguese,

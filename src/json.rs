@@ -201,7 +201,8 @@ use lingua_uzbek_language_model::UZBEK_MODELS_DIRECTORY;
 use lingua_lao_language_model::LAO_MODELS_DIRECTORY;
 #[cfg(feature = "khmer")]
 use lingua_khmer_language_model::KHMER_MODELS_DIRECTORY;
-
+#[cfg(feature = "norwegian")]
+use lingua_norwegian_language_model::NORWEGIAN_MODELS_DIRECTORY;
 
 
 use crate::ngram::Ngram;
@@ -493,6 +494,9 @@ fn get_language_models_directory(language: Language) -> Dir<'static> {
 
         #[cfg(feature = "lao")]
         Language::Lao => LAO_MODELS_DIRECTORY,
+
+        #[cfg(feature = "norwegian")]
+        Language::Norwegian => NORWEGIAN_MODELS_DIRECTORY,
 
 }
 }
